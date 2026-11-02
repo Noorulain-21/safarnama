@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafarNama — Pakistan Travel &amp; Tours | Portfolio Sample</title>
+<meta name="description" content="SafarNama is a portfolio sample travel website for Pakistan tours. Demo only — no real bookings.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="logo" href="#top" aria-label="SafarNama home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="34" height="34"><path d="M4 36 18 12l7 12 5-7 14 19H4z" fill="#fff"/><circle cx="37" cy="10" r="5" fill="#ffd166"/></svg>
+      </span>
+      <span class="logo-text">Safar<em>Nama</em></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#packages">Tours</a>
+      <a href="#estimator">Cost Estimator</a>
+      <a href="#booking">Book a Tour</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn-small" href="#booking">Plan My Trip</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Pakistan &middot; North to Coast &middot; Portfolio Sample</p>
+        <h1>Travel Pakistan,<br><span>one story at a time.</span></h1>
+        <p class="lede">Search tours by place or region, compare sample packages in PKR, estimate your trip cost, and try a demo booking — all in one page, with no sign-up and no real payment.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#packages">Explore Tours</a>
+          <a class="btn btn-ghost" href="#estimator">Estimate My Cost</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>9</strong><span>Sample tours</span></li>
+          <li><strong>4</strong><span>Regions</span></li>
+          <li><strong>PKR</strong><span>Prices in rupees</span></li>
+        </ul>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <div class="hero-art">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Mountain and coastline illustration">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#e0f2fe"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="300" fill="url(#sky)"/>
+            <circle cx="320" cy="55" r="28" fill="#fde68a"/>
+            <path d="M0 210 90 90l55 75 45-50 90 95 45-60 75 60v90H0z" fill="#0f766e"/>
+            <path d="M0 240 70 160l60 70 50-45 110 55 40-35 70 35v60H0z" fill="#134e4a"/>
+            <path d="M0 260h400v40H0z" fill="#0ea5e9"/>
+            <path d="M20 268q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0" fill="none" stroke="#fff" stroke-width="3" opacity=".7"/>
+          </svg>
+        </div>
+        <div class="hero-card-body">
+          <p class="hero-card-label">Featured sample tour</p>
+          <h2>Hunza Explorer</h2>
+          <p>5 days &middot; North &middot; From <strong>PKR 65,000</strong> / person</p>
+          <button class="btn btn-small" type="button" data-book="Hunza Explorer">Book This Tour</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH + FILTERS -->
+  <section class="wrap section" id="packages">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Tours &amp; Destinations</p>
+        <h2>Find a tour that fits your trip</h2>
+        <p class="muted">Search by place, or filter by region. Prices below are sample portfolio prices, not live fares.</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label class="search-box">
+        <span class="sr-only">Search destinations</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Search: Hunza, Lahore, beach, heritage…" autocomplete="off">
+      </label>
+      <div class="filters" role="group" aria-label="Filter by region">
+        <button type="button" class="filter-btn active" data-region="All">All regions</button>
+        <button type="button" class="filter-btn" data-region="North">North</button>
+        <button type="button" class="filter-btn" data-region="Punjab">Punjab</button>
+        <button type="button" class="filter-btn" data-region="Sindh">Sindh</button>
+        <button type="button" class="filter-btn" data-region="Coast">Coast</button>
+      </div>
+    </div>
+    <p id="resultCount" class="result-count" aria-live="polite"></p>
+    <div id="packageGrid" class="card-grid"></div>
+    <p id="noResults" class="no-results hidden">No tours match that search. Try another place, or choose “All regions”.</p>
+  </section>
+
+  <!-- ESTIMATOR -->
+  <section class="section section-alt" id="estimator">
+    <div class="wrap estimator-grid">
+      <div>
+        <p class="eyebrow">Trip-Cost Estimator</p>
+        <h2>What could your trip cost?</h2>
+        <p class="muted">Pick a sample tour, then change the days and travellers. The estimate uses that tour’s daily rate (tour price ÷ standard days) × days × travellers, so you can see the maths — it is a sample estimate, not a quote.</p>
+        <ul class="checklist">
+          <li>Transparent breakdown, no hidden steps</li>
+          <li>Works for solo trips and groups</li>
+          <li>Change any input and the total updates instantly</li>
+        </ul>
+      </div>
+      <form class="panel" id="estimatorForm" novalidate>
+        <label>
+          <span>Tour</span>
+          <select id="estPackage" required></select>
+        </label>
+        <div class="two-col">
+          <label>
+            <span>Days</span>
+            <input id="estDays" type="number" min="1" max="30" value="5" required>
+          </label>
+          <label>
+            <span>Travellers</span>
+            <input id="estTravellers" type="number" min="1" max="30" value="2" required>
+          </label>
+        </div>
+        <p id="estError" class="form-error hidden" role="alert"></p>
+        <div class="estimate-box">
+          <p class="muted">Estimated total (sample)</p>
+          <p class="estimate-total" id="estTotal">PKR 0</p>
+          <p class="estimate-detail" id="estDetail"></p>
+        </div>
+        <p class="tiny">Sample estimate only. Transport, hotels and availability are not booked through this demo.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="wrap section" id="booking">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Demo Booking</p>
+        <h2>Book a tour — demo only</h2>
+        <p class="muted">Fill in the form to see a demo confirmation with a booking reference. Nothing is actually booked, charged, or sent anywhere.</p>
+      </div>
+    </div>
+    <div class="booking-grid">
+      <form class="panel" id="bookingForm" novalidate>
+        <label>
+          <span>Your name</span>
+          <input id="bookName" type="text" placeholder="e.g. Ahmed Khan" required>
+        </label>
+        <label>
+          <span>Tour</span>
+          <select id="bookPackage" required></select>
+        </label>
+        <div class="two-col">
+          <label>
+            <span>Travel date</span>
+            <input id="bookDate" type="date" required>
+          </label>
+          <label>
+            <span>Travellers</span>
+            <input id="bookTravellers" type="number" min="1" max="20" value="2" required>
+          </label>
+        </div>
+        <p id="bookError" class="form-error hidden" role="alert"></p>
+        <button class="btn btn-block" type="submit">Confirm Demo Booking</button>
+        <p class="tiny">Demo site — no real bookings, no payment, no confirmation email is sent.</p>
+      </form>
+      <div class="panel confirmation" id="confirmation" aria-live="polite">
+        <div class="confirm-icon" aria-hidden="true">✓</div>
+        <h3>Demo booking confirmed</h3>
+        <p class="muted">This is a sample confirmation for portfolio demonstration only.</p>
+        <dl class="confirm-details">
+          <div><dt>Booking reference</dt><dd id="confRef">—</dd></div>
+          <div><dt>Name</dt><dd id="confName">—</dd></div>
+          <div><dt>Tour</dt><dd id="confTour">—</dd></div>
+          <div><dt>Date</dt><dd id="confDate">—</dd></div>
+          <div><dt>Travellers</dt><dd id="confTravellers">—</dd></div>
+          <div><dt>Sample total</dt><dd id="confTotal">—</dd></div>
+        </dl>
+        <p class="tiny">Keep this reference for your demo only. It is not a real booking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="wrap section" id="about">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">About This Sample</p>
+        <h2>Built as a portfolio piece</h2>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>What it shows</h3>
+        <p>Search and filtering in vanilla JavaScript, dynamic tour cards, form validation, a live cost estimator, and a demo booking flow — all without a build step or any external service.</p>
+      </div>
+      <div class="about-card">
+        <h3>How it works offline</h3>
+        <p>All data lives in <code>script.js</code>, all visuals are CSS gradients and inline SVG, and all text uses system fonts. Open <code>index.html</code> and it just works.</p>
+      </div>
+      <div class="about-card">
+        <h3>Demo, honestly labelled</h3>
+        <p>Tour prices, places and availability on this page are sample data for demonstration. There are no real customer reviews, real bookings, or real contact numbers on this site.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p><strong>SafarNama</strong> — Pakistan travel &amp; tours (portfolio sample).</p>
+    <p class="muted">Demo site — no real bookings. All tours, prices and availability shown are samples.</p>
+    <p>Built by Muhammad Umer Samroze — Portfolio Sample</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
